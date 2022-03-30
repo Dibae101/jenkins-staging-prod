@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'ssh ubuntu@52.202.226.255 "cd /var/www/html/jenkins-pipe-test; \
+                sh 'ssh ubuntu@IP "cd /var/www/html/jenkins-pipe-test; \
                     git pull origin master; \
                     composer install --no-interaction --no-dev; \
                     php artisan migrate --force; \
