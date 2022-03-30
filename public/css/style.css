@@ -1,0 +1,42 @@
+.navbar{
+    color: red !important;
+    background-color: #359CEB;
+}
+
+h1{
+    color: red !important;
+}
+
+h2{
+    color: green !important;
+}
+.navbar a{
+    color: #fff !important;
+}
+
+.dropdown-menu a{
+    color: red !important;
+}
+
+.navbar a:hover{
+    color: red !important;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.form{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
