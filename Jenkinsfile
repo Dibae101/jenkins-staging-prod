@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                
+                sh "composer install --no-interaction"
+                // sh "npm install"
+                // sh "npm run prod or dev"
             }
         }
         stage('Test') { 
             steps {
-                echo "Testing"
+                sh './vendor/bin/phpunit'
             }
         }
         stage('Deploy') { 
