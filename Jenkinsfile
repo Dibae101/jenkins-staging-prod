@@ -15,7 +15,13 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo "deploying"
+                sh 'ssh ubuntu@ip "cd /var/www/html/jenkins-pipe-test; \
+                    git pull origin master; \
+                    composer install --no-interaction --no-dev; \
+                    php artisan migrate --force; \
+                    php artisan cache:clear; \
+                    php artisan config:cache; \
+                "'
             }
         }
     }
