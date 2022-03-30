@@ -16,7 +16,7 @@ pipeline {
 
         stage('Deploy to Staging') { 
             steps {
-                sh 'ssh ubuntu@staging_server_IP "cd /var/www/html/jenkins-pipe-test; \
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@staging_server_IP "cd /var/www/html/jenkins-pipe-test; \
                     git pull origin master; \
                     composer install --no-interaction --no-dev; \
                     php artisan migrate --force; \
@@ -32,7 +32,7 @@ pipeline {
                 ok "Yes Please."
             }
             steps {
-                sh 'ssh ubuntu@prod_server_IP "cd /var/www/html/jenkins-pipe-test; \
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@prod_server_IP "cd /var/www/html/jenkins-pipe-test; \
                     git pull origin master; \
                     composer install --no-interaction --no-dev; \
                     php artisan migrate --force; \
