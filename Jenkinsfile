@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh "composer install --no-interaction"
+                sh 'composer install --no-interaction'
                 // sh "npm install"
                 // sh "npm run prod or dev"
             }
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo "deloying"
+                echo "deploying"
             }
         }
     }
