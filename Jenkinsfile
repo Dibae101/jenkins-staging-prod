@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev'
+                sh 'composer install --no-interaction'
                 // sh "npm install"
                 // sh "npm run prod or dev"
             }
