@@ -5,8 +5,7 @@
     <div class="jumbotron">
         <h1>Git WebHook on Jenkins</h1>
         <p class="lead">
-            This is a simple web application developed with Laravel PHP Framework. <br>
-            It is made for educational purpose at <a href="https://daredevops.com">Dare DevOps</a>
+            Sample CI/CD With Jenkins. <br>
         </p>
     <a class="btn btn-lg btn-primary" href="{{route('posts.index')}}" role="button">Browse Posts &raquo;</a>
     </div>
