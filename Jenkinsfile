@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'composer install --no-interaction'
+                sh 'sudo composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev'
                 // sh "npm install"
                 // sh "npm run prod or dev"
             }
@@ -32,7 +32,7 @@ pipeline {
                 ok "Yes Please."
             }
             steps {
-                sh 'ssh -o StrictHostKeyChecking=no ubuntu@prod_server_IP "cd /var/www/html/jenkins-pipe-test; \
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@107.21.83.210 "cd /var/www/html/jenkins-pipe-test; \
                     git pull origin master; \
                     composer install --no-interaction --no-dev; \
                     php artisan migrate --force; \
