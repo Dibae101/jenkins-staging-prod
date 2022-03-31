@@ -20,7 +20,7 @@ pipeline {
                 ok "Yes Please."
             }
             steps {
-                sh 'ssh -o StrictHostKeyChecking=no ubuntu@107.21.83.210 "cd /var/www/html/jenkins-pipe-test; \
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@3.93.172.116 "cd /var/www/html/jenkins-pipe-test; \
                     git pull origin master; \
                     composer install --no-interaction --no-dev; \
                     php artisan migrate --force; \
